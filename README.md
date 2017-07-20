@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vuex-todolist
 
 > A Vue.js project
@@ -19,3 +20,6 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# vuex-todolist
+>>>>>>> 93dacf7298a0f6d52ff77fe88539b4c7a360de0c

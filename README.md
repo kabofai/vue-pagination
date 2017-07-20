@@ -11,7 +11,7 @@ npm run dev
 npm run build
 ```
 
-## setInput
+## setInput.vue
 
 ``` html
 <template>
@@ -38,7 +38,7 @@ export default {
 </script>
 ```
 
-## todolist
+## todolist.vue
 
 ``` html
 <template>
@@ -103,7 +103,8 @@ export default {
 </script>
 ```
 
-## mutations_type
+## mutations_type.js
+
 ``` javascript
 export const ADD_TODO = 'ADD_TODO';
 export const SWITCH_TODO = 'SWITCH_TODO';

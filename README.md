@@ -1,4 +1,4 @@
-# vue-pagination
+# vue-pagination分页组件
 
 > [demo地址](https://kabofai.github.io/vue-pagination/dist)
 

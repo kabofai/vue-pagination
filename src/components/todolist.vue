@@ -13,9 +13,7 @@
       <p>暂无数据</p>
     </div>
     <div class="select-section">
-      <span :class="{ 'select-type': selected == '0' , 'select': true }" @click="selectType('0')">全部</span>
-      <span :class="{ 'select-type': selected == '1' , 'select': true }" @click="selectType('1')">已完成</span>
-      <span :class="{ 'select-type': selected == '2' , 'select': true }" @click="selectType('2')">未完成</span>
+      <span v-for="(item,key,index) in selection" :key="key" :id="item.id" class="select" :class="{ 'select-type': selected == item.id}" @click="selectType(item.id)">{{ item.text }}</span>
     </div>
   </div>
 </template>
@@ -40,6 +38,11 @@
     },
     data(){
       return{
+        selection:[
+          {id:0, text:'全部'},
+          {id:1, text:'已完成'},
+          {id:2, text:'未完成'}
+        ]
       }
     },
     methods:{
@@ -47,9 +50,7 @@
         this.$store.dispatch('switchTodo',id);
       },
       selectType(type){
-        if(type){
-          this.$store.dispatch('selectType',type);
-        }
+        this.$store.dispatch('selectType',type);
       },
       cancelTodo(id){
         this.$store.dispatch('cancelTodo',id);
@@ -119,6 +120,7 @@
       color:white;
     }
     .select{
+      cursor: pointer;
       display: inline-block;
       width: 60px;
       height: 30px;

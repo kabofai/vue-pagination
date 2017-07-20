@@ -45,7 +45,11 @@ export default {
   <div class="todo">
     <div class="todoList" v-if="todoList.length !== 0">
       <ul>
-        <li v-for="todo in todoList" :key="todo.id" :id="todo.id" class="todoItem" :class="{ 'isDone': todo.isDone }">
+        <li v-for="todo in todoList" 
+          :key="todo.id" 
+          :id="todo.id" class="todoItem" 
+          :class="{ 'isDone': todo.isDone }"
+        >
           <span class="radio" @click="switchTodo(todo.id)"></span>
           <span class="todoText">{{todo.text}}</span>
           <span class="cancel" @click="cancelTodo(todo.id)">X</span>
@@ -56,7 +60,13 @@ export default {
       <p>暂无数据</p>
     </div>
     <div class="select-section">
-      <span v-for="(item,key,index) in selection" :key="key" :id="item.id" class="select" :class="{ 'select-type': selected == item.id}" @click="selectType(item.id)">{{ item.text }}</span>
+      <span v-for="(item,key,index) in selection" 
+        :key="key" 
+        :id="item.id" 
+        class="select" 
+        :class="{ 'select-type': selected == item.id}" 
+        @click="selectType(item.id)"
+      >{{ item.text }}</span>
     </div>
   </div>
 </template>

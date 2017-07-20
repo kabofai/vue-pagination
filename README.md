@@ -1,21 +1,22 @@
 # vue-pagination
 
-> A Vue.js project
+> [demo地址](https://kabofai.github.io/vue-pagination/dist)
 
 ## Build Setup
 
 ``` bash
-# install dependencies
 npm install
-
-# serve with hot reload at localhost:8080
 npm run dev
-
-# build for production with minification
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Explain
+
+``` bash
+prevHtml:'上一页', //不定义为 <
+nextHtml:'下一页', //不定义为 >
+pageNum: 1,  //默认页 第一页
+pageSize: 20, //每页显示最大条数
+total: 500,  //一共多少条数据
+maxPage: 5,  //分页导航
+```

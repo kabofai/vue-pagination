@@ -24,5 +24,13 @@ export default {
     },
     [types.SELECT_TYPE](state, type) {
         state.selected = type;
+    },
+    [types.CANCEL_TODO](state, id) {
+        let list = state.todoList;
+        for (let i = 0; i < list.length; i++) {
+            if (list[i].id == id) {
+                list.splice(i, 1);
+            }
+        }
     }
 }

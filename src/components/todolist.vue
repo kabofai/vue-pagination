@@ -1,9 +1,11 @@
 <template>
-  <div class="layout">
+  <div class="todo">
     <div class="todoList" v-if="todoList.length !== 0">
       <ul>
-        <li v-for="todo in todoList" :key="todo.id" class="todoItem" :class="{ 'isDone': todo.isDone }">
-          <span class="radio" @click="switchTodo(todo.id)"></span><span class="todoText">{{todo.text}}</span>
+        <li v-for="todo in todoList" :key="todo.id" :id="todo.id" class="todoItem" :class="{ 'isDone': todo.isDone }">
+          <span class="radio" @click="switchTodo(todo.id)"></span>
+          <span class="todoText">{{todo.text}}</span>
+          <span class="cancel" @click="cancelTodo(todo.id)">X</span>
         </li>
       </ul>
     </div>
@@ -48,6 +50,9 @@
         if(type){
           this.$store.dispatch('selectType',type);
         }
+      },
+      cancelTodo(id){
+        this.$store.dispatch('cancelTodo',id);
       }
     }
   }
@@ -92,6 +97,11 @@
             &:hover{
               border:1px solid #141414;
             }
+          }
+          &.cancel{
+            float: right;
+            cursor: pointer;
+            color: red;
           }
         }
       }

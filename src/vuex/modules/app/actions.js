@@ -9,5 +9,8 @@ export default {
     },
     selectType({ commit }, type) {
         commit(types.SELECT_TYPE, type);
+    },
+    cancelTodo({ commit }, id) {
+        commit(types.CANCEL_TODO, id);
     }
 }

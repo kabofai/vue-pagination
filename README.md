@@ -1,7 +1,7 @@
 ## 基于vue2.0+vuex开发的本地记事本
 
 > vue + vuex
-[demo地址](https://kabofai.github.io/vuex-todolist/dist)
+> [demo地址](https://kabofai.github.io/vuex-todolist/dist)
 
 ## Build Setup
 
